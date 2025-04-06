@@ -39,7 +39,7 @@ if(NOT DEFINED FMT_DIR)
     CMAKE_ARGS -DFMT_TEST:BOOL=OFF  # Don't build all the tests
   )
   add_dependencies(piper fmt_external)
-  add_dependencies(test_piper fmt_external)
+  # add_dependencies(test_piper fmt_external)
 endif()
 
 # ---- spdlog ---
@@ -54,7 +54,7 @@ if(NOT DEFINED SPDLOG_DIR)
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${SPDLOG_DIR}
   )
   add_dependencies(piper spdlog_external)
-  add_dependencies(test_piper spdlog_external)
+  # add_dependencies(test_piper spdlog_external)
 endif()
 
 # ---- piper-phonemize ---
