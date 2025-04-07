@@ -17,7 +17,7 @@ elseif(NOT APPLE)
   string(APPEND CMAKE_C_FLAGS " -Wall -Wextra")
 endif()
 
-add_library(piper STATIC src/cpp/piper.cpp)
+add_library(piper DYNAMIC src/cpp/piper.cpp)
 # add_executable(piper src/cpp/main.cpp src/cpp/piper.cpp)
 # add_executable(test_piper src/cpp/test.cpp src/cpp/piper.cpp)
 
