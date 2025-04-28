@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 project(piper C CXX)
 
 file(READ "${CMAKE_CURRENT_LIST_DIR}/VERSION" piper_version)
+string(REGEX REPLACE "\n$" "" piper_version "${piper_version}")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,7 +18,7 @@ elseif(NOT APPLE)
   string(APPEND CMAKE_C_FLAGS " -Wall -Wextra")
 endif()
 
-add_library(piper STATIC src/cpp/piper.cpp)
+add_library(piper SHARED src/cpp/piper.cpp)
 # add_executable(piper src/cpp/main.cpp src/cpp/piper.cpp)
 # add_executable(test_piper src/cpp/test.cpp src/cpp/piper.cpp)
 
