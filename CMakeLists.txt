@@ -70,6 +70,7 @@ if(NOT DEFINED PIPER_PHONEMIZE_DIR)
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${PIPER_PHONEMIZE_DIR}
   )
   add_dependencies(piper piper_phonemize_external)
+  add_compile_defintions(PATH_ESPEAK_DATA="assets/espeak-ng-data")
   # add_dependencies(test_piper piper_phonemize_external)
 endif()
 
