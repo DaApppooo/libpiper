@@ -218,7 +218,7 @@ void initialize(PiperConfig &config) {
     // Set up espeak-ng for calling espeak_TextToPhonemesWithTerminator
     // See: https://github.com/rhasspy/espeak-ng
     spdlog::debug("Initializing eSpeak");
-    spdlob::debug("initialize(): " + config.eSpeakDataPath);
+    spdlog::debug("initialize(): " + config.eSpeakDataPath);
     int result = espeak_Initialize(AUDIO_OUTPUT_SYNCHRONOUS,
                                    /*buflength*/ 0,
                                    /*path*/ config.eSpeakDataPath.c_str(),
