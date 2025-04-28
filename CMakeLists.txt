@@ -54,6 +54,7 @@ if(NOT DEFINED SPDLOG_DIR)
     CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${SPDLOG_DIR}
   )
   add_dependencies(piper spdlog_external)
+  add_compile_definitions(PATH_ESPEAK_DATA="assets/espeak-ng-data")
   # add_dependencies(test_piper spdlog_external)
 endif()
 
